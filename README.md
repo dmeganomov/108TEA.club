@@ -26,4 +26,4 @@ Built with plain **HTML/CSS/JS**, no frameworks, easy to host on GitHub Pages.
 - Adjust colors in `styles.css` (CSS variables at the top).
 - Add images to `/assets` if needed and reference them in `index.html`.
 
-Have a calm cup ☕
+Have a calm cup ☕Have a calm cup ☕Have a calm cup ☕Have a calm cup ☕
