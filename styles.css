@@ -1,0 +1,45 @@
+/* 108TEA Club — compact minimal */
+:root{
+  --bg:#0f1115;
+  --panel:#141821;
+  --text:#e7edf3;
+  --muted:#aab4c0;
+  --accent:#9fe870;
+  --accent-2:#7cc4ff;
+  --line:#202636;
+  --card:#131926;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+a{color:var(--accent-2);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{width:min(1100px,92%);margin-inline:auto}
+.site-header{position:sticky;top:0;z-index:10;background:rgba(15,17,21,.75);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line)}
+.nav-wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.brand{font-weight:700;font-size:18px;color:var(--text)}
+.nav a{margin-left:16px;color:var(--muted)}
+.nav a:hover{color:var(--text)}
+.nav-toggle{display:none;background:transparent;border:1px solid var(--line);color:var(--text);padding:6px 10px;border-radius:8px}
+.hero{padding:72px 0 56px;background:linear-gradient(180deg,rgba(159,232,112,.08),rgba(124,196,255,.06) 60%,transparent)}
+.hero h1{font-size:40px;line-height:1.1;margin:0 0 8px}
+.sub{color:var(--muted);max-width:680px;margin:0 0 18px}
+.btn{display:inline-block;padding:10px 14px;border-radius:12px;border:1px solid var(--line);color:var(--text)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#0b0f14;font-weight:600}
+.btn.ghost{background:transparent}
+.section{padding:56px 0;border-top:1px solid var(--line);background:var(--bg)}
+.section.alt{background:var(--panel)}
+.section h2{margin:0 0 10px;font-size:28px}
+.lead{color:var(--muted);margin-top:0}
+.grid.two{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
+@media (max-width:860px){.grid.two{grid-template-columns:1fr}.nav{display:none}.nav-toggle{display:inline-block}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}
+.card h3{margin-top:0}
+.meta{list-style:none;padding:0;margin:0}
+.meta li{padding:6px 0;border-bottom:1px dashed var(--line)}
+.meta li:last-child{border-bottom:none}
+.bullet{padding-left:18px}
+.quote{margin-top:10px;color:var(--accent-2)}
+.site-footer{border-top:1px solid var(--line);padding:18px 0;color:var(--muted)}
+.open .nav{display:flex;flex-direction:column;position:absolute;left:0;right:0;top:56px;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 16px;gap:8px}
+.guide{margin:10px 0 0 18px}
+.muted{color:var(--muted)}
