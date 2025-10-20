@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>108TEA Club</title>
   <meta name="description" content="108TEA Club — a community for Chinese tea lovers." />
+  
+  <!-- AOS (Animate On Scroll) styles -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
   <style>
     :root {
       --fg: #111;
@@ -103,39 +107,43 @@
     .text p {
       margin: 8px auto;
     }
-    /* Контакты — более медленное проявление */
+
+    /* Контакты — упрощённый вид, без "квадратиков" */
     .links {
       display: grid;
-      gap: 10px;
-      margin: 24px auto 0;
+      gap: 8px;
+      margin: 16px auto 0;
       padding: 0;
       list-style: none;
-      max-width: 380px;
+      max-width: 420px;
       opacity: 0;
       transform: translateY(12px);
       animation: fadeInLinks 2.4s ease forwards 1.8s;
+      justify-items: center;
     }
     @keyframes fadeInLinks {
       to { opacity: 1; transform: translateY(0); }
     }
     .links a {
-      display: block;
-      padding: 12px 14px;
-      text-decoration: none;
-      border: 1px solid var(--border);
-      border-radius: 10px;
+      display: inline-block;
+      padding: 0;                 /* убрали внутренние отступы */
+      border: none;               /* убрали рамку */
+      border-radius: 0;           /* убрали скругление */
       color: var(--link);
       text-align: center;
       font-size: 15px;
-      transition: background 240ms ease, transform 240ms ease;
+      text-decoration: underline; /* простой вид ссылки */
+      transition: opacity 200ms ease;
     }
-    .links a:hover { background: #f1f1f1; transform: translateY(-1px); }
+    .links a:hover { opacity: 0.7; transform: none; background: none; }
+
     footer {
       margin-top: 36px;
       font-size: 12px;
       color: var(--muted);
       text-align: center;
     }
+
     @media (prefers-reduced-motion: reduce) {
       .wrap { animation: none; opacity: 1; transform: none; }
       .steam { display: none; }
@@ -145,41 +153,55 @@
 </head>
 <body>
   <main class="wrap">
-    <h1>108TEA Club</h1>
-    <div class="divider"></div>
-    <div class="steam" aria-hidden="true">
+    <h1 data-aos="fade-up">108TEA Club</h1>
+    <div class="divider" data-aos="fade-up" data-aos-delay="80"></div>
+
+    <div class="steam" aria-hidden="true" data-aos="fade-up" data-aos-delay="120">
       <span></span><span></span><span></span><span></span>
     </div>
 
-    <p class="lead">
+    <p class="lead" data-aos="fade-up" data-aos-delay="200">
       We host quiet, friendly tea ceremonies where good teas are shared and conversations unfold naturally. 
       The teas come from the catalog above — thoughtfully selected and meant to be enjoyed slowly.
       Whether you are new to tea or already on the path, you are welcome.
     </p>
 
-    <div class="divider"></div>
-    <h2>How to join</h2>
-    <div class="text">
+    <div class="divider" data-aos="fade-up" data-aos-delay="240"></div>
+
+    <h2 data-aos="fade-up">How to join</h2>
+    <div class="text" data-aos="fade-up" data-aos-delay="100">
       <p>Send a short hello on Telegram and tell us you’d like to join a ceremony.</p>
       <p>Gatherings are small and unhurried. We’ll share time and place privately.</p>
       <p>Nothing to bring — just curiosity and time. If it’s your first visit, we’ll guide you through the flow and teas we drink.</p>
     </div>
 
-    <div class="divider"></div>
-    <div class="text">
+    <div class="divider" data-aos="fade-up" data-aos-delay="160"></div>
+
+    <div class="text" data-aos="fade-up">
       <p>Stay tuned, take care, and enjoy your tea sessions.</p>
     </div>
 
-    <div class="divider"></div>
-    <h2>Contacts</h2>
-    <ul class="links">
+    <div class="divider" data-aos="fade-up" data-aos-delay="80"></div>
+
+    <h2 data-aos="fade-up">Contacts</h2>
+    <ul class="links" data-aos="fade-up" data-aos-delay="120">
       <li><a href="mailto:info@108tea.club">info@108tea.club</a></li>
       <li><a target="_blank" rel="noopener" href="http://t.me/ama108">Telegram Contact</a></li>
       <li><a target="_blank" rel="noopener" href="http://t.me/hundredeighttea">Telegram Catalog</a></li>
       <li><a target="_blank" rel="noopener" href="https://www.instagram.com/108tea.club/">Instagram</a></li>
     </ul>
 
-    <footer>© 2025 108TEA Club</footer>
+    <footer data-aos="fade-up" data-aos-delay="120">© 2025 108TEA Club</footer>
   </main>
+
+  <!-- AOS (Animate On Scroll) scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 80
+    });
+  </script>
 </body>
 </html>
