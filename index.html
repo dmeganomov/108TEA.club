@@ -20,7 +20,7 @@
     html, body { height: 100%; }
     body {
       margin: 0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Noto Sans;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       color: var(--fg);
       background: linear-gradient(120deg, #ffffff 0%, #fafafa 50%, #f8f8f8 100%);
       background-size: 200% 200%;
@@ -44,23 +44,41 @@
     @keyframes fadeInUp {
       to { opacity: 1; transform: translateY(0); }
     }
+
     h1 {
-      font-size: clamp(28px, 5vw, 40px);
+      font-size: clamp(36px, 6vw, 48px);
       margin: 0 0 22px;
       font-weight: 700;
       text-align: center;
       letter-spacing: 0.4px;
     }
+    h2 {
+      font-size: clamp(24px, 4vw, 30px);
+      margin: 0 0 20px;
+      font-weight: 600;
+      text-align: center;
+      letter-spacing: 0.3px;
+    }
+    h3 {
+      font-size: clamp(18px, 3vw, 22px);
+      margin: 0 0 16px;
+      font-weight: 500;
+      text-align: center;
+      letter-spacing: 0.2px;
+    }
+
     .lead {
       margin: 0 auto 30px;
       color: var(--muted);
       text-align: center;
       max-width: 60ch;
+      font-size: 16px;
     }
     .divider {
       height: 1px; background: var(--border);
       margin: 30px auto; max-width: 120px;
     }
+
     /* Анимация пара */
     .steam {
       position: relative;
@@ -91,24 +109,22 @@
       60%  { opacity: 0.25; }
       100% { transform: translateY(-48px) translateX(calc(var(--x, 0) - 4px)); opacity: 0; }
     }
-    h2 {
-      font-size: 18px;
-      margin: 0 0 12px;
-      font-weight: 600;
-      text-align: center;
-      letter-spacing: 0.3px;
-    }
+
     .text {
       margin: 0 auto;
       max-width: 62ch;
       color: var(--fg);
       text-align: center;
+      font-size: 16px;
     }
-    .text p {
-      margin: 8px auto;
-    }
+    .text p { margin: 8px auto; }
 
-    /* Контакты — упрощённый вид, без "квадратиков" */
+    /* About */
+    .about { max-width: 62ch; margin: 6px auto 26px; text-align: center; font-size: 16px; }
+    .about .tag { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0 0 6px; }
+    .about p { margin: 0 auto; color: var(--fg); }
+
+    /* Контакты — упрощённый вид */
     .links {
       display: grid;
       gap: 8px;
@@ -126,13 +142,13 @@
     }
     .links a {
       display: inline-block;
-      padding: 0;                 /* убрали внутренние отступы */
-      border: none;               /* убрали рамку */
-      border-radius: 0;           /* убрали скругление */
+      padding: 0;
+      border: none;
+      border-radius: 0;
       color: var(--link);
       text-align: center;
       font-size: 15px;
-      text-decoration: underline; /* простой вид ссылки */
+      text-decoration: underline;
       transition: opacity 200ms ease;
     }
     .links a:hover { opacity: 0.7; transform: none; background: none; }
@@ -155,6 +171,16 @@
   <main class="wrap">
     <h1 data-aos="fade-up">108TEA Club</h1>
     <div class="divider" data-aos="fade-up" data-aos-delay="80"></div>
+
+    <!-- About (в шапке) -->
+    <section id="about" class="about" data-aos="fade-up" data-aos-delay="120">
+      <h2>About</h2>
+      <p>
+        A quiet corner in Berlin for unhurried tea. We brew Chinese teas gongfu-style, gather in small circles, 
+        and let conversations unfold at their own pace. We also create gentle drone-ambient-ethno-psy sound landscapes, 
+        letting the space breathe in rhythm with the kettle.
+      </p>
+    </section>
 
     <div class="steam" aria-hidden="true" data-aos="fade-up" data-aos-delay="120">
       <span></span><span></span><span></span><span></span>
@@ -183,7 +209,7 @@
 
     <div class="divider" data-aos="fade-up" data-aos-delay="80"></div>
 
-    <h2 data-aos="fade-up">Contacts</h2>
+    <h3 data-aos="fade-up">Contacts</h3>
     <ul class="links" data-aos="fade-up" data-aos-delay="120">
       <li><a href="mailto:info@108tea.club">info@108tea.club</a></li>
       <li><a target="_blank" rel="noopener" href="http://t.me/ama108">Telegram Contact</a></li>
