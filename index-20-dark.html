@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>108TEA Club</title>
+  <meta name="description" content="108TEA Club — a community for Chinese tea lovers." />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <style>
+    :root {
+      --fg: #111;
+      --muted: #555;
+      --link: #0a0a0a;
+      --border: #e6e6e6;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: var(--fg);
+      background: linear-gradient(120deg, #ffffff 0%, #fafafa 50%, #f8f8f8 100%);
+      background-size: 200% 200%;
+      animation: bgmove 30s ease-in-out infinite alternate;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    @keyframes bgmove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+    .wrap {
+      max-width: 740px;
+      margin: 8vh auto 6vh;
+      padding: 0 16px;
+      opacity: 0;
+      transform: translateY(8px);
+      animation: fadeInUp 900ms ease-out 120ms forwards;
+    }
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h1 {
+      font-size: clamp(36px, 6vw, 48px);
+      margin: 0 0 22px;
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 0.4px;
+      width: 100%;
+      display: block;
+    }
+    h2 {
+      font-size: clamp(24px, 4vw, 30px);
+      margin: 0 0 20px;
+      font-weight: 600;
+      text-align: center;
+    }
+    .text {
+      max-width: 62ch;
+      margin: 0 auto 40px;
+      text-align: center;
+      font-size: 16px;
+      color: var(--fg);
+    }
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 30px auto;
+      max-width: 120px;
+    }
+    .links {
+      display: grid;
+      gap: 8px;
+      margin: 16px auto 0;
+      padding: 0;
+      list-style: none;
+      max-width: 420px;
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeInLinks 2.4s ease forwards 1.8s;
+      justify-items: center;
+    }
+    @keyframes fadeInLinks {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .links a {
+      color: var(--link);
+      text-decoration: underline;
+      font-size: 15px;
+      transition: opacity 200ms ease;
+    }
+    .links a:hover { opacity: 0.7; }
+    footer {
+      margin-top: 36px;
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+    }
+    .om {
+      display: block;
+      text-align: center;
+      font-size: 48px;
+      margin-bottom: 10px;
+      color: black;
+    }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fg: #e7e8ea;
+      --muted: #aaa;
+      --link: #e7e8ea;
+      --border: #2a2a2a;
+    }
+    body {
+      background: linear-gradient(120deg, #0b0c0f 0%, #131313 50%, #1a1a1a 100%);
+    }
+    .om {
+      color: #e7e8ea;
+    }
+  }
+
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="om" data-aos="fade-up">ॐ</div>
+    <h1 data-aos="fade-up">108TEA Club</h1>
+    <div class="divider" data-aos="fade-up"></div>
+
+    <section id="about" data-aos="fade-up">
+      <h2>About</h2>
+      <div class="text">
+        <p>A quiet corner in Berlin for unhurried tea.</p>
+        <p>We brew <a href="tea-catalog/catalog.html">Chinese teas</a> gongfu-style, gather in small circles, and let conversations unfold at their own pace.</p>
+    
+      </div>
+    </section>
+
+    <div class="divider" data-aos="fade-up"></div>
+
+    <section id="ritual" data-aos="fade-up">
+      <h2>Ritual & Atmosphere</h2>
+      <div class="text">
+        <p>Each ceremony is an invitation to return to the present moment. Through the shifting aroma of warm leaves, the taste that evolves with every steep, and the quiet rhythm of brewing, attention naturally softens and refocuses.</p>
+        <p>The ritual is not about formality — it’s about observing, listening, and letting awareness settle. In this gentle state, tea becomes a way to experience time differently: slower, deeper, more alive.</p>
+        <p>To support this space, we create subtle drone–ambient–ethno–psy soundscapes — live jam sessions that flow with the ceremony, blending seamlessly with silence and breath. The sound doesn’t lead; it drifts, holds, and expands the moment.</p>
+    
+      </div>
+    </section>
+
+    <div class="divider" data-aos="fade-up"></div>
+
+    <section id="booking" data-aos="fade-up">
+      <h2>Booking</h2>
+      <div class="text">
+        <p>We host intimate and friendly tea ceremonies where good teas are shared and conversations unfold naturally.</p>
+        <p>All teas are thoughtfully selected from our collection and meant to be enjoyed slowly. Whether you are new to tea or already on the path, you are welcome to join.</p>
+     
+      </div>
+    </section>
+
+    <div class="divider" data-aos="fade-up"></div>
+
+    <section id="events" data-aos="fade-up">
+      <h2>Events & Collaboration</h2>
+      <div class="text">
+        <p>We are open to collaborations — musical or artistic evenings, tea performances, creative gatherings with musicians and artists, as well as off-site ceremonies and pop-up events.</p>
+   
+      </div>
+    </section>
+
+    <div class="divider" data-aos="fade-up"></div>
+
+    <h2 data-aos="fade-up">Contacts</h2>
+    <ul class="links" data-aos="fade-up">
+      <li><a href="mailto:info@108tea.club">info@108tea.club</a></li>
+      <li><a target="_blank" rel="noopener" href="http://t.me/ama108">Telegram Contact</a></li>
+      <li><a target="_blank" rel="noopener" href="https://t.me/hundredeighttea/5">Telegram Catalog</a></li>
+      <li><a target="_blank" rel="noopener" href="https://www.instagram.com/108tea.club/">Instagram</a></li>
+    </ul>
+
+    <footer data-aos="fade-up">© 2025 108TEA Club</footer>
+  </main>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true, offset: 80 });
+  </script>
+</body>
+</html>
