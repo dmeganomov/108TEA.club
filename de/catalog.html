@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Tea Types Catalog — Preview</title>
+<style>
+    :root{--bg:#f8f8f8;--text:#222;--muted:#666;--border:#e6e6e6;--card:#fff;}
+    @media (prefers-color-scheme: dark){:root{--bg:#0b0c0f;--text:#e7e8ea;--muted:#aaa;--border:#2a2a2a;--card:#111;}}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;background:var(--bg);color:var(--text);line-height:1.6;padding:20px}
+    a{text-decoration:none;color:var(--text)}
+    header{max-width:1100px;margin:0 auto 20px;display:flex;justify-content:space-between;align-items:center}
+    header h1{font-size:clamp(24px,4vw,36px);font-weight:800}
+    header .note{font-size:13px;color:var(--muted)}
+    main{max-width:1100px;margin:0 auto}
+    #tea-types{--gap:18px}
+    #tea-types .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gap)}
+    #tea-types .card{grid-column:span 12;background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .15s ease, box-shadow .15s ease}
+    #tea-types .card:hover{transform:translateY(-2px);box-shadow:0 10px 18px rgba(0,0,0,.08)}
+    #tea-types .thumb{aspect-ratio:4/3;background:#f3f3f3;border-bottom:1px solid var(--border)}
+    #tea-types .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+    #tea-types .body{padding:12px 14px}
+    #tea-types .type{display:flex;align-items:center;gap:8px;margin:0 0 6px}
+    #tea-types .type .dot{width:8px;height:8px;border-radius:999px;background:#c6c6c6}
+    #tea-types .title{font-weight:700;font-size:16px}
+    #tea-types .zh{color:var(--muted);font-size:13px;margin-top:2px}
+    #tea-types .chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 0}
+    #tea-types .chip{font-size:12px;border:1px solid var(--border);border-radius:999px;padding:2px 8px;background:#fafafa;color:#555}
+    #tea-types .desc{font-size:14px;color:var(--muted);margin-top:8px}
+    @media(min-width:720px){#tea-types .card{grid-column:span 6}}
+    @media(min-width:1100px){#tea-types .card{grid-column:span 4}}
+    @media (prefers-color-scheme: dark){#tea-types .thumb{background:#1a1a1a;border-color:#2a2a2a} #tea-types .desc{color:#c7c7c7} #tea-types .chip{background:#161616;color:#bbb;border-color:#2a2a2a}}
+  </style>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/><style>
+.lang-switch{position:fixed;top:16px;right:16px;display:flex;gap:8px;z-index:9999;font-family:inherit}
+.lang-switch .btn{border:1px solid var(--border,#e6e6e6);padding:6px 10px;border-radius:999px;font-size:12px;text-decoration:none;color:var(--fg,#111);background:rgba(255,255,255,.8);backdrop-filter:blur(6px);transition:opacity .2s ease,transform .15s ease}
+@media (prefers-color-scheme: dark){.lang-switch .btn{background:rgba(20,20,20,.6);color:var(--fg,#e7e8ea);border-color:var(--border,#2a2a2a)}}
+.lang-switch .btn:hover{opacity:.85;transform:translateY(-1px)}
+.lang-switch .btn.active{pointer-events:none;opacity:.6}
+</style></head>
+<body><nav aria-label="Language switcher" class="lang-switch" data-aos="fade-down"><a class="btn" href="/tea-catalog/catalog.html">EN</a><a aria-current="page" class="btn active" href="#">DE</a></nav>
+<header>
+<h1 data-aos="fade-up">Teearten Katalog</h1>
+<a class="back" data-aos="fade-up" href="/de/index.html">← Zurück zur Startseite</a>
+</header>
+<main>
+<section data-aos="fade-up" id="tea-types">
+<div class="grid">
+<article class="card" data-aos="fade-up" data-aos-delay="0">
+<div class="thumb"><img alt="White Tea" src="images/white.png"/></div>
+<div class="body">
+<div class="type"><span class="dot"></span><span class="title">Weiß</span></div>
+<div class="zh">白茶 (Bái Chá)</div>
+<div class="chips"><span class="chip">Fermentation: 5–10 %</span><span class="chip">Aufguss: blassgelb</span></div>
+<div class="desc">Minimal verarbeitet: junge Knospen und Blätter werden gewelkt und getrocknet. Leicht, weich, leicht süßlich.</div>
+</div>
+</article>
+<article class="card" data-aos="fade-up" data-aos-delay="80">
+<div class="thumb"><img alt="Yellow Tea" src="images/yellow.png"/></div>
+<div class="body">
+<div class="type"><span class="dot"></span><span class="title">Gelb</span></div>
+<div class="zh">黄茶 (Huáng Chá)</div>
+<div class="chips"><span class="chip">Fermentation: 10–20 %</span><span class="chip">Aufguss: golden</span></div>
+<div class="desc">Eine seltene Teesorte: Die Blätter werden nach dem Erhitzen sanft „gedämpft“ (men huan). Weiches, rundes Profil mit geringer Bitterkeit.</div>
+</div>
+</article>
+<article class="card" data-aos="fade-up" data-aos-delay="160">
+<div class="thumb"><img alt="Green Tea" src="images/green.png"/></div>
+<div class="body">
+<div class="type"><span class="dot"></span><span class="title">Grün</span></div>
+<div class="zh">绿茶 (Lǜ Chá)</div>
+<div class="chips"><span class="chip">Fermentation: 0–30 %</span><span class="chip">Aufguss: hellgrün</span></div>
+<div class="desc">Unfermentiert; die Oxidation wird durch Hitze gestoppt. Frisch, grasig, je nach Herkunft manchmal nussig oder blumig.</div>
+</div>
+</article>
+<article class="card" data-aos="fade-up" data-aos-delay="240">
+<div class="thumb"><img alt="Oolong Tea" src="images/oolong.png"/></div>
+<div class="body">
+<div class="type"><span class="dot"></span><span class="title">Oolong</span></div>
+<div class="zh">乌龙 (Wū Lóng)</div>
+<div class="chips"><span class="chip">Fermentation: 30–70 %</span><span class="chip">Aufguss: hell bis bernsteinfarben</span></div>
+<div class="desc">Halbfermentierte Tees mit Aromen von blumig-leicht bis geröstet und würzig. Reiches Aroma und langer Nachhall.</div>
+</div>
+</article>
+<article class="card" data-aos="fade-up" data-aos-delay="320">
+<div class="thumb"><img alt="Red Tea" src="images/red.png"/></div>
+<div class="body">
+<div class="type"><span class="dot"></span><span class="title">Rot (im Westen Schwarztee)</span></div>
+<div class="zh">红茶 (Hóng Chá)</div>
+<div class="chips"><span class="chip">Fermentation: ≈ 75 %</span><span class="chip">Aufguss: bernsteinfarben / rötlich‑braun</span></div>
+<div class="desc">Vollständig fermentiert. Noten von Honig, Kakao und Trockenfrüchten. Im Westen als „Schwarztee“ bekannt.</div>
+</div>
+</article>
+<article class="card" data-aos="fade-up" data-aos-delay="400">
+<div class="thumb"><img alt="Hei Cha (Dark Tea)" src="images/hei_cha.png"/></div>
+<div class="body">
+<div class="type"><span class="dot"></span><span class="title">Hei Cha (Dunkler Tee)</span></div>
+<div class="zh">黑茶 (Hēi Chá)</div>
+<div class="chips"><span class="chip">Nachfermentiert: 100 %</span><span class="chip">Aufguss: dunkelbraun</span></div>
+<div class="desc">Nachfermentierter dunkler Tee aus Regionen wie Hunan und Guangxi. Erdiger, tiefer, milder Geschmack; umfasst Liu Bao.</div>
+</div>
+</article>
+<article class="card" data-aos="fade-up" data-aos-delay="480">
+<div class="thumb"><img alt="Shu Pu'er" src="images/shu.png"/></div>
+<div class="body">
+<div class="type"><span class="dot"></span><span class="title">Shu Pu’er</span></div>
+<div class="zh">熟普洱 (Shú Pǔ’ěr)</div>
+<div class="chips"><span class="chip">Nachfermentiert: 100 %</span><span class="chip">Aufguss: dunkelbraun</span></div>
+<div class="desc">Beschleunigte Nachfermentation (wo dui). Mildes, warmes Profil, das mit der Reifung runder wird; geringe Bitterkeit.</div>
+</div>
+</article>
+<article class="card" data-aos="fade-up" data-aos-delay="560">
+<div class="thumb"><img alt="Sheng Pu'er" src="images/sheng.png"/></div>
+<div class="body">
+<div class="type"><span class="dot"></span><span class="title">Sheng Pu’er</span></div>
+<div class="zh">生普洱 (Shēng Pǔ’ěr)</div>
+<div class="chips"><span class="chip">Natürliche Reifung</span><span class="chip">Aufguss: hell → bernsteinfarben</span></div>
+<div class="desc">„Roh“-Pu’er, der über Jahre reift — jung grasig und lebhaft, gereift honig‑fruchtig und komplex.</div>
+</div>
+</article>
+</div>
+</section>
+</main>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script>AOS.init({ duration: 800, once: true, offset: 80 });</script></body>
+</html>
