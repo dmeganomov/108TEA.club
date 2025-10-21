@@ -1,10 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tea Types Catalog — Preview</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Tea Types Catalog — Preview</title>
+<style>
     :root{--bg:#f8f8f8;--text:#222;--muted:#666;--border:#e6e6e6;--card:#fff;}
     @media (prefers-color-scheme: dark){:root{--bg:#0b0c0f;--text:#e7e8ea;--muted:#aaa;--border:#2a2a2a;--card:#111;}}
     *{box-sizing:border-box;margin:0;padding:0}
@@ -32,100 +33,95 @@
     @media(min-width:1100px){#tea-types .card{grid-column:span 4}}
     @media (prefers-color-scheme: dark){#tea-types .thumb{background:#1a1a1a;border-color:#2a2a2a} #tea-types .desc{color:#c7c7c7} #tea-types .chip{background:#161616;color:#bbb;border-color:#2a2a2a}}
   </style>
-</head>
-<body>
-  <header>
-    <h1>Tea Types Catalog</h1>
-    <a href="../index.html" class="back">← Back to Home</a>
-  </header>
-
-  <main>
-    <section id="tea-types">
-      <div class="grid">
-
-        <article class="card">
-          <div class="thumb"><img src="images/white.png" alt="White Tea"></div>
-          <div class="body">
-            <div class="type"><span class="dot"></span><span class="title">White</span></div>
-            <div class="zh">白茶 (Bái Chá)</div>
-            <div class="chips"><span class="chip">Fermentation: 5–10%</span><span class="chip">Liquor: pale yellow</span></div>
-            <div class="desc">Minimally processed: young buds/leaves are withered and dried. Light, soft, slightly sweet.</div>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="thumb"><img src="images/yellow.png" alt="Yellow Tea"></div>
-          <div class="body">
-            <div class="type"><span class="dot"></span><span class="title">Yellow</span></div>
-            <div class="zh">黄茶 (Huáng Chá)</div>
-            <div class="chips"><span class="chip">Fermentation: 10–20%</span><span class="chip">Liquor: golden</span></div>
-            <div class="desc">A rare style: leaves are gently “smothered” after firing (men huan). Smooth, rounded profile with low bitterness.</div>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="thumb"><img src="images/green.png" alt="Green Tea"></div>
-          <div class="body">
-            <div class="type"><span class="dot"></span><span class="title">Green</span></div>
-            <div class="zh">绿茶 (Lǜ Chá)</div>
-            <div class="chips"><span class="chip">Fermentation: 0–30%</span><span class="chip">Liquor: light green</span></div>
-            <div class="desc">Unfermented; oxidation is halted by heat. Fresh, grassy, sometimes nutty or floral depending on origin.</div>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="thumb"><img src="images/oolong.png" alt="Oolong Tea"></div>
-          <div class="body">
-            <div class="type"><span class="dot"></span><span class="title">Oolong</span></div>
-            <div class="zh">乌龙 (Wū Lóng)</div>
-            <div class="chips"><span class="chip">Fermentation: 30–70%</span><span class="chip">Liquor: light to amber</span></div>
-            <div class="desc">Semi‑fermented teas ranging from light floral to roasted and spicy. Rich aroma and long finish.</div>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="thumb"><img src="images/red.png" alt="Red Tea"></div>
-          <div class="body">
-            <div class="type"><span class="dot"></span><span class="title">Red (black in the West)</span></div>
-            <div class="zh">红茶 (Hóng Chá)</div>
-            <div class="chips"><span class="chip">Fermentation: ≈ 75%</span><span class="chip">Liquor: amber / reddish‑brown</span></div>
-            <div class="desc">Fully fermented. Notes of honey, cocoa and dried fruit. Called “black tea” in Western terminology.</div>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="thumb"><img src="images/hei_cha.png" alt="Hei Cha (Dark Tea)"></div>
-          <div class="body">
-            <div class="type"><span class="dot"></span><span class="title">Hei Cha (Dark Tea)</span></div>
-            <div class="zh">黑茶 (Hēi Chá)</div>
-            <div class="chips"><span class="chip">Post‑fermented: 100%</span><span class="chip">Liquor: dark brown</span></div>
-            <div class="desc">Post‑fermented dark tea from regions such as Hunan and Guangxi. Earthy, deep, mellow; includes Liu Bao.</div>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="thumb"><img src="images/shu.png" alt="Shu Pu'er"></div>
-          <div class="body">
-            <div class="type"><span class="dot"></span><span class="title">Shu Pu'er</span></div>
-            <div class="zh">熟普洱 (Shú Pǔ’ěr)</div>
-            <div class="chips"><span class="chip">Post‑fermented: 100%</span><span class="chip">Liquor: dark brown</span></div>
-            <div class="desc">Accelerated post‑fermentation (wo dui). Mellow, warm profile that rounds out with age; low bitterness.</div>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="thumb"><img src="images/sheng.png" alt="Sheng Pu'er"></div>
-          <div class="body">
-            <div class="type"><span class="dot"></span><span class="title">Sheng Pu'er</span></div>
-            <div class="zh">生普洱 (Shēng Pǔ’ěr)</div>
-            <div class="chips"><span class="chip">Natural aging</span><span class="chip">Liquor: light → amber</span></div>
-            <div class="desc">“Raw” Pu'er that matures over years — grassy and bright when young, honey‑fruity and complex when aged.</div>
-          </div>
-        </article>
-
-      </div>
-    </section>
-     
-  </main>
-</body>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/><style>
+.lang-switch{position:fixed;top:16px;right:16px;display:flex;gap:8px;z-index:9999;font-family:inherit}
+.lang-switch .btn{border:1px solid var(--border,#e6e6e6);padding:6px 10px;border-radius:999px;font-size:12px;text-decoration:none;color:var(--fg,#111);background:rgba(255,255,255,.8);backdrop-filter:blur(6px);transition:opacity .2s ease,transform .15s ease}
+@media (prefers-color-scheme: dark){.lang-switch .btn{background:rgba(20,20,20,.6);color:var(--fg,#e7e8ea);border-color:var(--border,#2a2a2a)}}
+.lang-switch .btn:hover{opacity:.85;transform:translateY(-1px)}
+.lang-switch .btn.active{pointer-events:none;opacity:.6}
+</style></head>
+<body><nav aria-label="Language switcher" class="lang-switch" data-aos="fade-down"><a aria-current="page" class="btn active" href="#">EN</a><a class="btn" href="/de/tea-catalog/catalog.html">DE</a></nav>
+<header>
+<h1 data-aos="fade-up">Tea Types Catalog</h1>
+<a class="back" data-aos="fade-up" href="/index.html">← Back to Home</a>
+</header>
+<main>
+<section data-aos="fade-up" id="tea-types">
+<div class="grid">
+<article class="card" data-aos="fade-up" data-aos-delay="0">
+<div class="thumb"><img alt="White Tea" src="images/white.png"/></div>
+<div class="body">
+<div class="type"><span class="dot"></span><span class="title">White</span></div>
+<div class="zh">白茶 (Bái Chá)</div>
+<div class="chips"><span class="chip">Fermentation: 5–10%</span><span class="chip">Liquor: pale yellow</span></div>
+<div class="desc">Minimally processed: young buds/leaves are withered and dried. Light, soft, slightly sweet.</div>
+</div>
+</article>
+<article class="card" data-aos="fade-up" data-aos-delay="80">
+<div class="thumb"><img alt="Yellow Tea" src="images/yellow.png"/></div>
+<div class="body">
+<div class="type"><span class="dot"></span><span class="title">Yellow</span></div>
+<div class="zh">黄茶 (Huáng Chá)</div>
+<div class="chips"><span class="chip">Fermentation: 10–20%</span><span class="chip">Liquor: golden</span></div>
+<div class="desc">A rare style: leaves are gently “smothered” after firing (men huan). Smooth, rounded profile with low bitterness.</div>
+</div>
+</article>
+<article class="card" data-aos="fade-up" data-aos-delay="160">
+<div class="thumb"><img alt="Green Tea" src="images/green.png"/></div>
+<div class="body">
+<div class="type"><span class="dot"></span><span class="title">Green</span></div>
+<div class="zh">绿茶 (Lǜ Chá)</div>
+<div class="chips"><span class="chip">Fermentation: 0–30%</span><span class="chip">Liquor: light green</span></div>
+<div class="desc">Unfermented; oxidation is halted by heat. Fresh, grassy, sometimes nutty or floral depending on origin.</div>
+</div>
+</article>
+<article class="card" data-aos="fade-up" data-aos-delay="240">
+<div class="thumb"><img alt="Oolong Tea" src="images/oolong.png"/></div>
+<div class="body">
+<div class="type"><span class="dot"></span><span class="title">Oolong</span></div>
+<div class="zh">乌龙 (Wū Lóng)</div>
+<div class="chips"><span class="chip">Fermentation: 30–70%</span><span class="chip">Liquor: light to amber</span></div>
+<div class="desc">Semi‑fermented teas ranging from light floral to roasted and spicy. Rich aroma and long finish.</div>
+</div>
+</article>
+<article class="card" data-aos="fade-up" data-aos-delay="320">
+<div class="thumb"><img alt="Red Tea" src="images/red.png"/></div>
+<div class="body">
+<div class="type"><span class="dot"></span><span class="title">Red (black in the West)</span></div>
+<div class="zh">红茶 (Hóng Chá)</div>
+<div class="chips"><span class="chip">Fermentation: ≈ 75%</span><span class="chip">Liquor: amber / reddish‑brown</span></div>
+<div class="desc">Fully fermented. Notes of honey, cocoa and dried fruit. Called “black tea” in Western terminology.</div>
+</div>
+</article>
+<article class="card" data-aos="fade-up" data-aos-delay="400">
+<div class="thumb"><img alt="Hei Cha (Dark Tea)" src="images/hei_cha.png"/></div>
+<div class="body">
+<div class="type"><span class="dot"></span><span class="title">Hei Cha (Dark Tea)</span></div>
+<div class="zh">黑茶 (Hēi Chá)</div>
+<div class="chips"><span class="chip">Post‑fermented: 100%</span><span class="chip">Liquor: dark brown</span></div>
+<div class="desc">Post‑fermented dark tea from regions such as Hunan and Guangxi. Earthy, deep, mellow; includes Liu Bao.</div>
+</div>
+</article>
+<article class="card" data-aos="fade-up" data-aos-delay="480">
+<div class="thumb"><img alt="Shu Pu'er" src="images/shu.png"/></div>
+<div class="body">
+<div class="type"><span class="dot"></span><span class="title">Shu Pu'er</span></div>
+<div class="zh">熟普洱 (Shú Pǔ’ěr)</div>
+<div class="chips"><span class="chip">Post‑fermented: 100%</span><span class="chip">Liquor: dark brown</span></div>
+<div class="desc">Accelerated post‑fermentation (wo dui). Mellow, warm profile that rounds out with age; low bitterness.</div>
+</div>
+</article>
+<article class="card" data-aos="fade-up" data-aos-delay="560">
+<div class="thumb"><img alt="Sheng Pu'er" src="images/sheng.png"/></div>
+<div class="body">
+<div class="type"><span class="dot"></span><span class="title">Sheng Pu'er</span></div>
+<div class="zh">生普洱 (Shēng Pǔ’ěr)</div>
+<div class="chips"><span class="chip">Natural aging</span><span class="chip">Liquor: light → amber</span></div>
+<div class="desc">“Raw” Pu'er that matures over years — grassy and bright when young, honey‑fruity and complex when aged.</div>
+</div>
+</article>
+</div>
+</section>
+</main>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script>AOS.init({ duration: 800, once: true, offset: 80 });</script></body>
 </html>
